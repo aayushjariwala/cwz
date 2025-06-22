@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: 'Familjen Grotesk', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Sections */
+section {
+  position: relative;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+.section-inner {
+  position: absolute;
+  bottom: 200px;
+  left: 150px;
+  max-width: 560px;
+}
+
+.section-inner h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  animation: fadeInUp 0.5s ease-in-out;
+      font-family: 'Orbitron', sans-serif;
+}
+
+.section-inner h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both; 
+      font-family: 'Orbitron', sans-serif;
+}
+
+.section-inner a {
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both; 
+}
+
+/* Background images */
+
+
+.background-video1 {
+  position: absolute;
+  top: 30;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.section-b {
+  background-image: url('../img/section-b.webp');
+}
+.section-c {
+  background-image: url('../img/section-c.webp');
+}
+.section-d {
+  background-image: url('../img/section-d.webp');
+}
+.section-e {
+  background-image: url('../img/section-e.webp');
+}
+.section-f {
+  background-image: url('../img/section-f.webp');
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  min-width: 130px;
+  padding: 15px 50px;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.btn:hover span {
+  color: #000;
+}
+
+.btn .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #000;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn:hover .hover {
+  transform: translateY(0);
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeBounce 5s infinite;
+}
+
+.section-animate {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.section-inner-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+  width: 80%;
+}
+
+.section-inner-center h3 {
+  font-size: 100px;
+  margin-bottom: 15px;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.section-inner-center p {
+  font-size: 20px;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+
+
+/* Animations */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+
+
+
+@media (max-width: 600px) {
+  
+}
+
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Individual Card */
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 0px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: black;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale the card on hover */
+  opacity: 1; /* Maintain full opacity on hover */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.4s ease, transform 0.2s ease, opacity 0.2s ease;
+  transition-timing-function: ease-in-out;
+}
+
+.card:hover img {
+  filter: blur(5px); /* Blur the image on hover */
+  transform: translateY(100%); /* Move the image to the bottom */
+  opacity: 0; /* Fade out the image */
+}
+
+/* Text Overlay - Always Visible */
+.card-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  color: #fff;
+  z-index: 2;
+}
+
+.card-text h3 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.card-text p {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* Hover Overlay Text */
+.card-hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.card:hover .card-hover-text {
+  opacity: 1; /* Show the hover text */
+}
+
+
+/* Section C */
+.section-c {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center everything */
+  justify-content: center; /* Vertically center content */
+  overflow: hidden;
+  background: #000000;
+  height: 100vh; /* Full-screen height */
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  z-index: 1; /* Keeps the image in the background */
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.2s ease-out;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Text Container - Below the Image */
+.text-container {
+  position: relative; /* Relative to its normal flow */
+  margin-top: 20px; /* Space between image and text */
+  text-align: center; /* Center the text */
+  color: #fff; /* White text for contrast */
+  font-size: 1.2em;
+  z-index: 2; /* Keeps text above the background */
+}
+
+.text-heading {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.text-paragraph {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.join-link {
+  color: #a770ff; /* Accent color for the link */
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.join-link span {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1.2em;
+  transform: translateY(2px);
+}
+
+
+
+/* section d */
+/* Section Styling */
+.scrolling-text-section {
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Wrapper for Continuous Scrolling */
+.scrolling-text-wrapper {
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Scrolling Content */
+.scrolling-text {
+  display: flex;
+  animation: scrollText 25s linear infinite; /* Slow scrolling animation */
+}
+
+/* Individual Text Block */
+.text-block {
+  display: inline-block;
+  white-space: normal;
+  width: 600px; /* Wider text block */
+  margin-right: 100px; /* Space between blocks */
+  box-sizing: border-box;
+  text-align: center; /* Center align text */
+}
+
+/* Date Style */
+.text-date {
+  font-size: 1.2em; /* Larger date text */
+  color: #ccc;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Title Style */
+.text-title {
+  font-size: 2.5em; /* Larger text size for main title */
+  font-weight: bold;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+/* Keyframes for Smooth, Continuous Scrolling */
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause Scroll on Hover */
+.scrolling-text-wrapper:hover .scrolling-text {
+  animation-play-state: paused; /* Pauses animation on hover */
+}
+
+
+
+
+/* Button */
+/* From Uiverse.io by nikk7007 */ 
+.btn {
+  --color: #e5e124cc;
+  --color2: rgb(10, 25, 30);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: .3px solid var(--color);
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+ }
+ 
+ .btn::after, .btn::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+  background-color: var(--color);
+ }
+ 
+ .btn::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+ }
+ 
+ .btn:hover {
+  color: var(--color2);
+ }
+ 
+ .btn:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+ }
+
+
+
+
+
+@media (max-width: 768px) {
+ .section-a {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.section-inner {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.section-inner h2{
+ font-size: 30px;
+}
+
+  
+  .hover {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.1;
+    transition: left 0.4s;
+  }
+
+  .btn:hover .hover {
+    left: 0;
+  }
+}

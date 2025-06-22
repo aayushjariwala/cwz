@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Document</title>
+</head>
+<body>
+  <header class="main-header" id="main-header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/codewizardstudio__4_-removebg-preview.png" alt="" />
+        </a>
+      </div>
+      <nav class="desktop-main-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contactus.html">Contact us</a></li>
+          <li><a href="ourstory.html">Our Story</a></li>
+       
+        
+        </ul>
+      </nav>
+
+     
+    </header>
+<script>
+  const header = document.getElementById("main-header");
+  let lastScroll = 0;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      // scrolling down, hide header
+      header.classList.add("hidden");
+    } else {
+      // scrolling up, show header
+      header.classList.remove("hidden");
+    }
+
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
+
+</body>
+</html>

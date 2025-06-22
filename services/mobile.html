@@ -1,0 +1,117 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./mobiledevelopmentstyle.css" />
+       <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
+     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+        <script src="../js/include.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <title>Mobile Application Development - CWZ</title>
+  </head>
+  <body>
+  
+ <header class="main-header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="../img/CODEWIZARDSTUDIO__2_-removebg-preview.png" alt="LOGO" />
+        </a>
+      </div>
+      <nav class="desktop-main-menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../contactus.html">Contact us</a></li>
+          <li><a href="../ourstory.html">Our Story</a></li>
+       
+        
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="hero">
+      <div>
+          <h2 id="title">Mobile Application Development </h2>
+          <p>Innovative, Scalable, and Tailored Solutions for Your Business</p>
+      </div>
+  </div>
+
+
+
+
+
+
+
+  
+  
+  <div class="container">
+      <section class="section">
+          <h3>About Mobile Application Development Services</h3>
+          <p>Our web development services are designed to help businesses establish a robust online presence. We specialize in creating dynamic, responsive, and user-friendly websites that drive engagement and conversions.</p>
+      </section>
+
+
+      
+
+      
+
+     
+      </section> 
+
+      <section class="section cta">
+          <h3>Ready to Elevate Your Online Presence?</h3>
+          <a href="../contactus.html" class="btn">
+            <div class="hover"></div>
+            <span>Let's Talk</span>
+          </a>
+      </section>
+  </div>
+   
+
+
+  
+
+       <footer>
+      <ul>
+        <li>CodeWizardStudio &copy; 2022</li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Flickr</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Suppliers</a></li>
+      </ul>
+    </footer>
+
+
+    <script>
+      let lastScrollTop = 0;
+      const header = document.getElementById("header");
+
+      window.addEventListener("scroll", function () {
+          let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+          if (currentScroll > lastScrollTop) {
+              // Scroll down
+              header.classList.add("hidden");
+          } else {
+              // Scroll up
+              header.classList.remove("hidden");
+          }
+          lastScrollTop = currentScroll;
+      });
+  </script>
+  </body>
+</html> 
+
+
+
+
+
+
+ 

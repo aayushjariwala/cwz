@@ -1,0 +1,311 @@
+/* Reset margin and set font */
+
+
+/* Style the header */
+.first {
+  background-image: url(../img/pawel-czerwinski-Y4rs8BpjCm4-unsplash.jpg);
+  background-size: cover;        /* Ensures the image covers the area */
+  background-position: center;   /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents tiling */
+  min-height: 100vh; /* 100% of the viewport height */
+  text-align: center;
+  color: white;                  /* Optional: ensure text is readable */
+  
+}
+
+/* Style the heading */
+.main-heading {
+  color: #101abb;
+  font-size: 36px;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+.second-heading{
+  color: #ffffff;
+  font-size: 20px;
+  padding-top: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif;
+    padding-bottom: 0px;
+}
+
+/* card */
+/* From Uiverse.io by gharsh11032000 */ 
+
+.story-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+
+
+}
+
+.story-text {
+  flex: 1;
+  min-width: 300px;
+  color: white;
+}
+
+.story-text h1 {
+  font-size: 36px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.story-text h3 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+.story-text1 {
+  
+  flex: 1;
+  min-width: 300px;
+  color: white;
+}
+
+.story-text1 h1 {
+  font-size: 36px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.story-text1 h3 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.story-text1 p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.story-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.story-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ✅ Reverse layout when this class is added */
+.story-container.reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  padding: 60px 20px; /* Ensures inner spacing */
+  
+  background-image: url(../img/pexels-mart-production-8801128.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+
+
+.story-image1 {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.story-image1 img {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+
+
+/* our partners */
+
+.partners-section {
+  padding: 80px 40px;
+  background-color: #080808; /* Light background */
+  text-align: center;
+}
+
+.partners-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.partners-logos img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.partners-logos img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+
+.promo-video-container {
+  width: 100%;
+  height: calc(100vh - 400px); /* Adjust 400px based on height of "Our Partners" section */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 0;
+  padding: 0;
+}
+
+.promo-video-container video {
+    padding-top: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+
+@media (max-width: 768px) {
+  .promo-video-container video {
+    object-fit: contain;
+  }
+
+}
+
+/* ============================
+   Responsive Styles for Mobile
+   ============================ */
+
+@media (max-width: 768px) {
+  /* General Reset */
+  html, body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Story Container */
+  .story-container,
+  .story-container.reverse {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .story-text,
+  .story-text1,
+  .story-image,
+  .story-image1 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .story-image img,
+  .story-image1 img {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .main-heading {
+    font-size: 24px;
+  }
+
+  .second-heading {
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .story-text p,
+  .story-text1 p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  /* Partners Section */
+  .partners-section {
+    padding: 40px 20px;
+    width: 100%;
+  }
+
+  .partners-heading {
+    font-size: 24px;
+  }
+
+  .partners-logos {
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .partners-logos img {
+    width: 80px;
+  }
+
+  /* Promo Video */
+  .promo-video-container {
+    height: auto;
+    margin-top: 30px;
+    width: 100vw;
+  }
+
+  .promo-video-container video {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Spacer for navbar */
+#navbar-placeholder {
+  height: 100px; /* Match this with your navbar height */
+}
+
+}
